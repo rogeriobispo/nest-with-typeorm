@@ -10,11 +10,10 @@ export const dataSourceOptions: DataSourceOptions = {
   password: process.env.DB_PASSWORD || 'postgres',
   database: process.env.DB_NAME || 'devtraining',
   entities: [Course, Tag],
-  synchronize: true,
+  synchronize: false,
 };
 
 export const dataSource = new DataSource({
   ...dataSourceOptions,
-  synchronize: false,
   migrations: ['dist/migrations/*.js'],
 })

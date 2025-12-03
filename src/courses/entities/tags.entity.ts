@@ -12,9 +12,9 @@ export class Tag {
   @ManyToMany(() => Course, course => course.tags)
   courses: Course[];
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   created_at: Date;
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   updated_at: Date;
 }

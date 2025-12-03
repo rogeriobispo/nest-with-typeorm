@@ -26,13 +26,13 @@ export class CoursesController {
 
   @Put(':id')
   updateOne(@Param('id') id: string, @Body() body: UpdateCourseDTO) {
-    this.coursesService.update(id, body);
+    return this.coursesService.update(id, body);
   }
 
   @HttpCode(204)
   @Delete(':id')
   deleteOne(@Param('id') id: string) {
-    this.coursesService.delete(id);
+    return this.coursesService.delete(id);
   }
 
 }

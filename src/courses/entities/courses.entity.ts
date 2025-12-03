@@ -16,9 +16,9 @@ export class Course {
   @ManyToMany(() => Tag, tag => tag.courses, { cascade: true })
   tags: Tag[];
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   created_at: Date;
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn()
   updated_at: Date;
 }
